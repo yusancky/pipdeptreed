@@ -15,4 +15,4 @@ jobs:
           python-version: '3.11'
       - name: Install Python Dependencies
         run: pip install pipdeptree pwiki selenium
-      - run: pipdeptree
+      - run: pipdeptree --graph-output svg > dependencies.svg
