@@ -1,6 +1,7 @@
 name: Main
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:
@@ -15,4 +16,4 @@ jobs:
           python-version: '3.11'
       - name: Install Python Dependencies
         run: pip install pipdeptree pwiki selenium
-      - run: pipdeptree --graph-output svg > dependencies.svg
+      - run: pipdeptree -f --warn
